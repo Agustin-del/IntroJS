@@ -2,7 +2,7 @@
 
 // n° 1 // había hecho validaciones que lo echaban del programa, 'dando mensajes', pero lo cambie a que lo repromptee
 
-let number
+/* let number
 
 do {
     number = prompt('Enter a number between 1 and 100: ')
@@ -11,7 +11,7 @@ do {
 for(let i = number; i >= 0; i--) {
     console.log(i)
 }
-
+ */
 // n° 2
 
 /* let number
