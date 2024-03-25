@@ -1,40 +1,39 @@
 // ejercicios "low"
 
-// n° 1
+// n° 1 // había hecho validaciones que lo echaban del programa, 'dando mensajes', pero lo cambie a que lo repromptee
+/* 
+let number
 
-/* let number = prompt('Enter a number between 1 and 100: ')
-if (number < 1 || number > 100) {
-    console.log('Read well, please')
-} else {
-    for(let i = number; i >= 0; i--) {
-        console.log(i)
-    }
-} */
+do {
+    number = prompt('Enter a number between 1 and 100: ')
+} while (number > 100 || number < 1)
 
+for(let i = number; i >= 0; i--) {
+    console.log(i)
+}
+ */
 // n° 2
 
-/* let number = prompt('Enter a number between 1 and 10: ')
+/* let number
+do {
+    number = prompt('Enter a number between 1 and 10: ')
+} while (number < 1 || number > 10)
 
-if (number < 1 || number > 10) {
-    console.log('Read well, please')
-} else {
-    for(let i = 1; i <= 10; i++) {
-        console.log(`${i}x${number}=${number * i}`)
-    }
-} */
-
-// n° 3 
-/* 
-let number = parseInt(prompt('Enter a number: '))
+for(let i = 1; i <= 10; i++) {
+    console.log(`${i}x${number}=${number * i}`)
+}
+ */
+// n° 3  
+/* let number = parseInt(prompt('Enter a number: '))
 
 let sum = 0
 while (number !== 0) {
     sum += number
     number = parseInt(prompt('Enter a number: '))
 }
- */
-// console.log(sum)
 
+console.log(sum)
+ */
 // n° 4 
 
 /* let sum = 0
@@ -74,8 +73,8 @@ for (const key in person) {
 // ejercicios "medium"
 
 // n° 1
-/* 
-let secretNumber = sum
+
+/* let secretNumber = sum
 let counter = 0
 let guess
 
@@ -116,7 +115,7 @@ for (let i = 0; i < times; i++) {
 }
 
 console.log(result)
- */
+*/
 // n° 4
 
 /* const dateLimit = '1997-8-3'
@@ -151,7 +150,7 @@ for (const number of numbers) {
 
 // n° 8 
 
-/* let persons = [{
+/*  let persons = [{
     name : 'Juan',
     lastName : 'Pérez',
     age: 38,
@@ -176,12 +175,15 @@ for (const number of numbers) {
     member : 'son', 
 }]
 
-for (const person of persons) { 
-    console.log(`Hello, I am ${person.name} ${person.lastName}(${person.member}) and I am ${person.age} years old.`)
-
+function presentation(persons) {
+    
+    for (const person of persons) { 
+        console.log(`Hello, I am ${person.name} ${person.lastName}(${person.member}) and I am ${person.age} years old.`)
+    }
 }
- */
 
+presentation(persons)
+ */
 // ejercicios "high"
 
 // n° 1
