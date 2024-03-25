@@ -1,7 +1,7 @@
 // ejercicios "low"
 
 // n° 1 // había hecho validaciones que lo echaban del programa, 'dando mensajes', pero lo cambie a que lo repromptee
-/* 
+
 let number
 
 do {
@@ -11,7 +11,7 @@ do {
 for(let i = number; i >= 0; i--) {
     console.log(i)
 }
- */
+
 // n° 2
 
 /* let number
@@ -104,7 +104,7 @@ for (let i = 1; i <= number; i++) {
 
 // n° 3 // No sé como sacarle la coma del final
 /* function RingBell() {
-    return("Ding Dong,");
+    return("Ding Dong, ");
 }
 
 result = ''
@@ -114,8 +114,8 @@ for (let i = 0; i < times; i++) {
     result += RingBell()
 }
 
-console.log(result)
-*/
+console.log(result.slice(0, -2))
+ */
 // n° 4
 
 /* const dateLimit = '1997-8-3'
