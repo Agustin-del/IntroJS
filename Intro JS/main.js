@@ -2,7 +2,7 @@
 // n°1
     
 let myFirstName = "Edmundo"
-console.log(myName)
+console.log(myFirstName)
  
 // n°2
 
@@ -26,8 +26,7 @@ let fullName = myFirstName + " " + myLastName
 
 // n°7
 
-let presentationText = myName + myLastName + myAge + myPet + petAge + fullName
-
+let presentationText = `Me llamo ${myFirstName} ${myLastName} tengo ${myAge} mi mascota se llama ${myPet} tiene ${petAge} años y mi nombre completo es ${fullName}`
 
 // ejercicios "medium"
 
@@ -46,7 +45,8 @@ let divisionAges = myAge / petAge
 let student = {
     firstName:"Edmundo",
     secondName:"Agustín",
-    lastName:"Rúveda", age:32,
+    lastName:"Rúveda",
+    age:32,
     favoriteColor: "Purple",
 }
 
@@ -60,7 +60,8 @@ console.log(student.favoriteColor)
 
 // n°3
 
-let pet = {name:"Lolo",
+let pet = {
+name:"Lolo",
 age:2,
 color:"Orange",
 species:"Cat",
@@ -91,8 +92,8 @@ console.log(fruits[4])
 
 // n°1
 
-let iAmAdult = prompt("How old are you?") >= 18
-console.log("I am an adult", iAmAdult)
+let iAmAdult = prompt('How old are you? ') >= 18
+console.log('I am an adult', iAmAdult)
 
 // n°2
 
