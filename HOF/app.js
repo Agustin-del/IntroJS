@@ -1,52 +1,51 @@
 // ejercicio 1
 
-let mensaje = message => console.log(message)
+let mensaje = message => console.log(message);
 
 // ejercicio 2
 
-let result = (number1, number2) =>  number1 * number2
+let result = (number1, number2) =>  number1 * number2;
 
 // ejercicio 3
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function createMultplication (number1, number2) {
 
-    let result = number1 * number2
+    let result = number1 * number2;
 
-    return result
+    return result;
 
 }
 
-const array2 = array.map(e => createMultplication(e, 3))
+const array2 = array.map(number => createMultplication(number, 3));
 
-console.log(array2)
+console.log(array2);
 
 // ejercicio 4
 
-const arrayBeers = []
+const beersArray = beers.map(beer => beer);
 
-beers.map(beer => arrayBeers.push(beer))
-
-function powerBeers(arrayBeers) {
-    const beersSorted = arrayBeers.toSorted((a,b) => b.abv - a.abv)
-    const powerBeers = beersSorted.slice(0, 10)
-    return powerBeers
+function powerBeers(array) {
+    const beersSorted = array.toSorted((a,b) => b.abv - a.abv).slice(0,10);
+    return beersSorted;
 }
+
+//cuando lo revisé lo metí todo en una sola línea, pero lo había hecho como el de abajo, me parece mejor forma, porque declaro menos variables, pero la verdad no sé, lo dejo para que me den su opinión o explicación, gracias.
 
 // ejercicio 5
 
-function bitBeer (arrayBeers) {
-    const beersSorted = arrayBeers.toSorted((a,b) => a.ibu - b.ibu)
-    const lessBitterBeers = beersSorted.slice(0, 10)
-    return lessBitterBeers
+function bitBeer (array) {
+    const beersSorted = array.toSorted((a,b) => a.ibu - b.ibu);
+    const lessBitterBeers = beersSorted.slice(0, 10);
+    return lessBitterBeers;
 }
 
 // ejercicio 6 
 
 function findBeer(array, name) {
-    let index = array.findIndex(a => a.name == name)
-    return array[index]
+    let index = array.findIndex(a => a.name == name);
+    return array[index];
 }
 
 // ejercicio 7
@@ -54,20 +53,20 @@ function findBeer(array, name) {
 function findIbu(array, ibu) {
     for (let i = 0; i < array.length; i++) {
         if (array[i].ibu == ibu){
-            return array[i]
+            return array[i];
         }
     }
-    return `There is no beer with an ibu of ${ibu}`
+    return `There is no beer with an ibu of ${ibu}`;
 }
 
 // ejercicio 8
 
 function beerPosition(array, beerName) {
-    let index = array.findIndex(beer => beer.name == beerName)
+    let index = array.findIndex(beer => beer.name == beerName);
     if (index == -1) {
-        return `${beerName} does not exist`
+        return `${beerName} does not exist`;
     } else {
-        return index + 1
+        return index + 1;
     }
 }
 
@@ -118,4 +117,4 @@ function createRow(array) {
     }
 }
 
-console.log(createRow(arrayBeers))
+createRow(beersArray)
