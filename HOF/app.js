@@ -18,7 +18,7 @@ function createMultplication (number1, number2) {
 
 }
 
-const array2 = array.map(number => createMultplication(number, 3));
+const array2 = array.map(number => createMultplication(number, 2));
 
 console.log(array2);
 
@@ -44,7 +44,7 @@ function bitBeer (array) {
 // ejercicio 6 
 
 function findBeer(array, name) {
-    let index = array.findIndex(a => a.name == name);
+    let index = array.findIndex(beer => beer.name == name);
     return array[index];
 }
 
@@ -74,8 +74,8 @@ function beerPosition(array, beerName) {
 
 function alcohol(array, abv) {
     
-    const birras = array.filter(beer => beer.abv < abv)
-    const nuevasBirras = []
+    const birras = array.filter(beer => beer.abv < abv);
+    const nuevasBirras = [];
     
     for (const beer of birras) {
         nuevasBirras.push(birra = {
@@ -84,28 +84,28 @@ function alcohol(array, abv) {
             abv: beer.abv
         })    
     }
-    return nuevasBirras
+    return nuevasBirras;
 }
 
 // ejercicio 10
 
 function orderBeers(array, property, order){
     
-    let beersSorted
+    let beersSorted;
 
     if (order){
-        beersSorted = array.toSorted((a,b) => a[property] - b[property])
+        beersSorted = array.toSorted((a,b) => a[property] - b[property]);
     } else {
-        beersSorted = array.toSorted((a,b) => b[property] - a[property])
+        beersSorted = array.toSorted((a,b) => b[property] - a[property]);
     }
 
-    const beers = beersSorted.slice(0, 10)
-    return beers
+    const beers = beersSorted.slice(0, 10);
+    return beers;
 }
 
 // ejercicio 11
 
-let table = document.getElementById('tbody') 
+let table = document.getElementById('tbody');
 
 function createRow(array) {
     for (let i = 0; i < array.length; i++) {
@@ -113,8 +113,8 @@ function createRow(array) {
             <td class ="p-2 border-solid border border-black">${array[i].name}</td>
             <td class ="p-2 border-solid border border-black">${array[i].abv}</td>
             <td class ="p-2 border-solid border border-black">${array[i].ibu}</td>
-        </tr>`
+        </tr>`;
     }
 }
 
-createRow(beersArray)
+createRow(beersArray);

@@ -1,35 +1,33 @@
 // ejercicio 1
 
-let titulo = document.getElementById('titulo');
+// let titulo = document.getElementById('titulo');
 
 // ejercicio 2
 
 let tituloPrincipal = 'Frutas';
-
-titulo.innerHTML = tituloPrincipal;
+titulo.firstChild.nodeValue = tituloPrincipal;
 
 // ejercicio 3
 
-let hf = document.getElementsByClassName('hf');
+// let hf = document.getElementsByClassName('hf');
 
-for (const element of hf) {
+for (const element of document.getElementsByClassName('hf')) {
     element.style.backgroundColor= 'orange';
 }
 
 // ejercicio 4
 
-let p = document.getElementsByTagName('p');
-p[0].innerHTML = 'Edmundo Agustín Rúveda Cohort n°54';
+// let p = document.getElementsByTagName('p');
+document.getElementsByTagName('p')[0].firstChild.nodeValue = 'Edmundo Agustín Rúveda Cohort n°54';
 
 // ejercicio 5
 
 let div = document.createElement('div');
-
 div.id ='contenedor';
+
 document.body.children[1].append(div);
 // document.body.children[1].children[1].id = 'contenedor';
 
-let contenedor = document.getElementById('contenedor');
 
 // ejercicio 6 
 
@@ -79,19 +77,21 @@ displayCards(fruits);
 
 // ejercicio 9
 
-let lista = document.createElement('div');
-lista.id = 'lista';
+div = document.createElement('div');
+div.id = 'lista';
+let lista = document.getElementById('lista')
 
 document.body.children[1].appendChild(lista);
 
+
 let tituloLista = document.createElement('h2');
-lista.appendChild(tituloLista);
+div.appendChild(tituloLista);
 
 tituloLista.innerHTML = 'Frutas Dulces';
 
 // ejercicio 10 y 11
 let ul = document.createElement('ul');
-lista.append(ul);
+div.append(ul);
 
 function createItems(object) {
     for (const fruit of fruits) {
