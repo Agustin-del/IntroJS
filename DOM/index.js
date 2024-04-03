@@ -1,6 +1,8 @@
+//Es todo lo que está comentado, lo otro son cosas que fui probando.
+
 // ejercicio 1
 
-// let titulo = document.getElementById('titulo');
+let titulo = document.getElementById('titulo');
 
 // ejercicio 2
 
@@ -77,33 +79,36 @@ displayCards(fruits);
 
 // ejercicio 9
 
-div = document.createElement('div');
-div.id = 'lista';
-let lista = document.getElementById('lista')
+let contenedorLista = document.createElement('div');
+contenedorLista.id = 'lista';
 
-document.body.children[1].appendChild(lista);
-
+document.body.children[1].appendChild(contenedorLista);
 
 let tituloLista = document.createElement('h2');
-div.appendChild(tituloLista);
+contenedorLista.appendChild(tituloLista);
 
 tituloLista.innerHTML = 'Frutas Dulces';
 
 // ejercicio 10 y 11
-let ul = document.createElement('ul');
-div.append(ul);
 
-function createItems(object) {
+let ul = document.createElement('ul');
+contenedorLista.appendChild(ul);
+
+function createItems(object, contenedor) {
+    let fragment = new DocumentFragment();
     for (const fruit of fruits) {
         if (fruit.esDulce) {
-            let item = document.createElement('li');
-            ul.appendChild(item);
-            item.innerHTML = fruit.nombre;
+            let aux = document.createElement('li')
+            aux.innerHTML = fruit.nombre;
+            fragment.appendChild(aux);
+            contenedor.appendChild(fragment);
         }
     }
+    
+    
 }
 
-createItems(fruits);
+createItems(fruits, ul);
 
 //se me ocurrió esta otra forma y me gustó más, pero luego me di cuenta que el ejercicio es más específico, perdón por dejar tantos comentarios, pero la verdad me re costó este sprint je...
 
