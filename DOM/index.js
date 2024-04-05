@@ -7,7 +7,7 @@ let titulo = document.getElementById('titulo');
 // ejercicio 2
 
 let tituloPrincipal = 'Frutas';
-titulo.firstChild.nodeValue = tituloPrincipal;
+titulo.textContent = tituloPrincipal;
 
 // ejercicio 3
 
@@ -20,7 +20,7 @@ for (const element of document.getElementsByClassName('hf')) {
 // ejercicio 4
 
 // let p = document.getElementsByTagName('p');
-document.getElementsByTagName('p')[0].firstChild.nodeValue = 'Edmundo Agustín Rúveda Cohort n°54';
+document.getElementsByTagName('p')[0].textContent = 'Edmundo Agustín Rúveda Cohort n°54';
 
 // ejercicio 5
 
@@ -86,8 +86,10 @@ document.body.children[1].appendChild(contenedorLista);
 
 let tituloLista = document.createElement('h2');
 contenedorLista.appendChild(tituloLista);
+tituloLista.textContent = 'Frutas Dulces';
+// let textNode = document.createTextNode('Frutas dulces')
 
-tituloLista.innerHTML = 'Frutas Dulces';
+// tituloLista.appendChild(textNode)
 
 // ejercicio 10 y 11
 
