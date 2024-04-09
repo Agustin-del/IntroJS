@@ -8,21 +8,26 @@ contenedor.addEventListener("submit", (event) => {
     const { color, texto } = event.target;
     let grafitiPoster = document.createElement('div');
     grafitiPoster.classList.add("text-xl","break-all", `w-[300px]`, `h-[300px]`, `bg-[${color.value}]`, "p-4");
-    grafitiPoster.textContent = texto.value;
-
+    let text = document.createElement('h2')
+    text.innerText = texto.value;
+    text.className = "flex items-center w-full flex-wrap"
+    
     let fuente = document.getElementById('inputFont')
     if (fuente.checked) {
         grafitiPoster.classList.add('italic')
     }
+
     contenedor.reset()
     let closeButton = document.createElement('button');
-    closeButton.classList.add("h-[30px]", "object-fit", "absolute");
+    closeButton.classList.add("h-[30px]", "object-fit", "w-full", "text-right");
     closeButton.textContent = "X";  
     closeButton.addEventListener("click", (event) => {
         event.preventDefault();
         grafitiPoster.remove();
     });
+    
     grafitiPoster.appendChild(closeButton);
-    poster.appendChild(grafitiPoster);
 
+    poster.appendChild(grafitiPoster);
+    grafitiPoster.appendChild(text)
 });
